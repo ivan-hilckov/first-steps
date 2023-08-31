@@ -1,0 +1,11 @@
+.filters {
+  display: flex;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background: #16324F;
+  color: #fff;
+  margin: 3px;
+}

@@ -1,0 +1,13 @@
+.list {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background: #2A628F;
+  color: #fff;
+  margin: 3px;
+  min-height: 100px;
+  height: 100%;
+  flex: 1;
+}
