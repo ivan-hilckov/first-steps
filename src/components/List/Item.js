@@ -2,7 +2,9 @@ import './Item.css';
 
 function Item() {
   return (
-    <div className="list">list</div>
+    <div className="container__item">
+
+    </div>
   )
 }
 

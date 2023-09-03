@@ -1,11 +1,117 @@
 .filters {
+  height: 193px;
+  width: 1440px;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  background: #FAFAFA;
+  color: #000000F5;
   display: flex;
-  height: 150px;
+  justify-content: flex-start;
+
+}
+
+.block__filters {
+  border-radius: 16px;
+  background: var(--surface-blank, #FFF);
+  box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.04);
+  width: 920px;
+  height: 152px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-left: 24px;
+}
+
+.filters__top {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-left: 20px;
+  margin-bottom: 18px;
+  margin-top: 22px;
+}
+
+.filters__title {
+  color: var(--primary-600, #037BFF);
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.filters__bottom {
+  display: flex;
+}
+
+.filters__category {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.filters__section {
+  color: var(--secondary-200, #A8B8CA);
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
   text-transform: uppercase;
-  background: #16324F;
-  color: #fff;
-  margin: 3px;
+  margin-bottom: 16px;
+}
+
+.filters__buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter_button {
+  color: var(--primary-600, #037BFF);
+  background-color: #FFF;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-600, #037BFF);
+  cursor: pointer;
+  padding: 4px 16px;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter_button:hover {
+  opacity: 0.5;
+}
+
+.filter_button:active {
+  color: #FFF;
+  background-color:  #037BFF;
+  opacity: 1;
+}
+
+.filters__status {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+
+.filters__checkBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filters__checkBox label {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.filters__checkBox input {
+  width: 20px;
+  height: 20px;
 }

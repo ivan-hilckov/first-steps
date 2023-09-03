@@ -1,6 +1,6 @@
-import Header from 'components/Header/Header'
-import Filters from 'components/Filters/Filters'
-import List from 'components/List/List'
+import Header from './components/Header/Header'
+import Filters from './components/Filters/Filters'
+import List from './components/List/List'
 
 import data from './data.json'
 
