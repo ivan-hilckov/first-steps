@@ -2,7 +2,6 @@
   height: 193px;
   width: 1440px;
   font-family: 'Montserrat', sans-serif;
-  font-family: 'Oswald', sans-serif;
   background: #FAFAFA;
   color: #000000F5;
   display: flex;
@@ -65,7 +64,7 @@
   gap: 10px;
 }
 
-.filter_button {
+.filter__button {
   color: var(--primary-600, #037BFF);
   background-color: #FFF;
   text-align: center;
@@ -81,11 +80,11 @@
   gap: 10px;
 }
 
-.filter_button:hover {
+.filter__button:hover {
   opacity: 0.5;
 }
 
-.filter_button:active {
+.filter__button:active {
   color: #FFF;
   background-color:  #037BFF;
   opacity: 1;

@@ -3,7 +3,6 @@
   width: 1440px;
   height: 1000px;
   font-family: 'Montserrat', sans-serif;
-  font-family: 'Oswald', sans-serif;
   background: #FAFAFA;
   color: #000000F5;
   display: flex;
@@ -83,7 +82,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 600;
-  line-height: 20px; 
+  line-height: 20px;
   border: 1px solid transparent;
   border-radius: 12px;
   background: var(--background-approved, #E6F5E6);
@@ -111,14 +110,14 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  line-height: 20px; 
+  line-height: 20px;
 }
 
 .list__product__bottom {
   display: flex;
   text-align: center;
   align-items: center;
-  
+
 }
 
 .list__product__price {
@@ -127,7 +126,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  line-height: 24px; 
+  line-height: 24px;
 }
 
 .list__product__discount {
@@ -135,7 +134,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 600;
-  line-height: 16px; 
+  line-height: 16px;
 }
 
 @media (max-width: 1440px) {
