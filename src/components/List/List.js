@@ -1,4 +1,8 @@
 import './List.css';
+import canola from "./images/canola.png";
+import corn from "./images/corn.png";
+import oats from "./images/oats.png";
+import wheat from "./images/wheat.png";
 
 function List() {
   return (
@@ -9,8 +13,8 @@ function List() {
       <div class="list__container">
 
         <div class="list__product">
-          <div className='list__product__image'>
-            <img src='images/canola.png' alt="canola" />
+          <div>
+            <img className="list__product__image" src={canola} alt="canola" />;
           </div>
           <div className="list__product__text">
             <div className='list__product__top'>
@@ -32,10 +36,9 @@ function List() {
             </div>
           </div>
         </div>
-
         <div class="list__product">
-          <div className='list__product__image'>
-            <img src='images/wheat.png' alt="wheat" />
+          <div>
+            <img className="list__product__image" src={wheat} alt="wheat" />;
           </div>
           <div className="list__product__text">
             <div className='list__product__top'>
@@ -50,10 +53,9 @@ function List() {
             </div>
           </div>
         </div>
-
         <div class="list__product">
-          <div className='list__product__image'>
-            <img src='images/corn.png' alt="corn" />
+          <div>
+            <img className="list__product__image" src={corn} alt="corn" />;
           </div>
           <div className="list__product__text">
             <div className='list__product__top'>
@@ -74,10 +76,9 @@ function List() {
             </div>
           </div>
         </div>
-
         <div class="list__product">
-          <div className='list__product__image'>
-            <img src='images/corn.png' alt="corn" />
+          <div>
+            <img className="list__product__image" src={corn} alt="corn" />;
           </div>
           <div className="list__product__text">
             <div className='list__product__top'>
@@ -97,10 +98,9 @@ function List() {
             </div>
           </div>
         </div>
-
         <div class="list__product">
-          <div className='list__product__image'>
-            <img src='images/oats.png' alt="oats" />
+          <div>
+            <img className="list__product__image" src={oats} alt="oats" />;
           </div>
           <div className="list__product__text">
             <div className='list__product__top'>
@@ -116,10 +116,9 @@ function List() {
             </div>
           </div>
         </div>
-
         <div class="list__product">
-          <div className='list__product__image'>
-            <img src='images/canola.png' alt="canola" />
+          <div>
+            <img className="list__product__image" src={canola} alt="canola" />;
           </div>
           <div className="list__product__text">
             <div className='list__product__top'>
@@ -134,10 +133,9 @@ function List() {
             </div>
           </div>
         </div>
-
         <div class="list__product">
-          <div className='list__product__image'>
-            <img src='images/wheat.png' alt="wheat" />
+          <div>
+            <img className="list__product__image" src={wheat} alt="wheat" />;
           </div>
           <div className="list__product__text">
             <div className='list__product__top'>
@@ -152,10 +150,9 @@ function List() {
             </div>
           </div>
         </div>
-
         <div class="list__product">
-          <div className='list__product__image'>
-            <img src='images/canola.png' alt="canola" />
+          <div>
+            <img className="list__product__image" src={canola} alt="canola" />;
           </div>
           <div className="list__product__text">
             <div className='list__product__top'>
@@ -176,10 +173,9 @@ function List() {
             </div>
           </div>
         </div>
-
         <div class="list__product">
-          <div className='list__product__image'>
-            <img src='images/oats.png' alt="oats" />
+          <div>  
+            <img className="list__product__image" src={oats} alt="oats" />;
           </div>
           <div className="list__product__text">
             <div className='list__product__top'>
@@ -194,7 +190,6 @@ function List() {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   )

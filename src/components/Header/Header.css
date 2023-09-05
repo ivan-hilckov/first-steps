@@ -55,3 +55,23 @@
   font-weight: 500;
   line-height: 20px; 
 }
+
+@media (max-width: 1440px) {
+  .header{
+    width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header{
+    width: 767px;
+  }
+  
+}
+
+@media (max-width: 767px) {
+  .header{
+    width: 500px;
+  }
+  
+}

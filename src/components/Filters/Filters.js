@@ -1,5 +1,6 @@
 import './Filters.css';
 
+
 function Filters() {
   return (
     <div className="filters">
@@ -25,6 +26,7 @@ function Filters() {
               <button className='filter_button'>Wheat</button>
               <button className='filter_button'>Soybeans</button>
               <button className='filter_button'>Barley</button>
+              
             </div>
           </div>
           <div className='filters__status'>

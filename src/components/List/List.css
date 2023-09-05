@@ -38,11 +38,14 @@
 
 .list__product__text {
   width: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 0;
 }
 
 .list__product__top {
   display: flex;
-  margin: 12px auto;
   flex-direction: column;
   align-content: space-between;
 }
@@ -55,13 +58,15 @@
 .first__line__category{
   display: flex;
   justify-content: flex-end;
+  gap: 8px;
+  padding-right: 12px;
 }
 
 .limited {
   color: var(--secondary-300, #889BB1);
   width: 45px;
   height: 20px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 600;
   line-height: 20px;
@@ -75,7 +80,7 @@
 .new {
   color: var(--accent-approving, #20B02E);
   text-align: center;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 600;
   line-height: 20px; 
@@ -86,15 +91,16 @@
 }
 
 .filters__category {
-  color: #A8B8CA;
-  font-family: 'Montserrat';
+  color: var(--secondary-200, #A8B8CA);
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 600;
+  line-height: 20px;
 }
 
 .list__product__title {
   color: rgba(0, 0, 0, 0.96);
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -102,7 +108,7 @@
 
 .list__product__description {
   color:  rgba(0, 0, 0, 0.96);
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px; 
@@ -111,13 +117,14 @@
 .list__product__bottom {
   display: flex;
   text-align: center;
-  align-items: flex-start;
+  align-items: center;
+  
 }
 
 .list__product__price {
   margin-right: 8px;
   color: var(--on-surface-high-emphasys, rgba(0, 0, 0, 0.96));
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px; 
@@ -125,8 +132,35 @@
 
 .list__product__discount {
   color: var(--accent-notify, #F90);
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 600;
   line-height: 16px; 
+}
+
+@media (max-width: 1440px) {
+  .list{
+    width: 1024px;
+  }
+  .list__container {
+    grid-template-columns: repeat(2, 448px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .list{
+    width: 767px;
+  }
+  .list__container {
+    grid-template-columns: repeat(1, 448px);
+    }
+}
+
+@media (max-width: 767px) {
+  .list{
+    width: 500px;
+  }
+  .list__container {
+  grid-template-columns: repeat(1, 448px);
+  }
 }
