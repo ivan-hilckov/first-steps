@@ -1,11 +1,10 @@
 .filters {
   height: 193px;
-  width: 1440px;
   font-family: 'Montserrat', sans-serif;
   background: #FAFAFA;
   color: #000000F5;
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
 }
 
@@ -32,7 +31,6 @@
 }
 
 .filters__title {
-  color: var(--primary-600, #037BFF);
   font-family: 'Montserrat';
   font-size: 18px;
   font-weight: 600;
@@ -40,7 +38,8 @@
 }
 
 .filters__bottom {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .filters__category {
@@ -61,6 +60,7 @@
 
 .filters__buttons {
   display: flex;
+  flex:wrap;
   gap: 10px;
 }
 
@@ -99,32 +99,27 @@
 
 .filters__checkBox {
   display: flex;
-  align-items: center;
   gap: 10px;
+  text-align: center;
 }
 
-.filters__checkBox label {
-  font-family: 'Montserrat';
+.label__checkbox {
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
+  cursor:pointer;  
 }
 
-.filters__checkBox input {
+.checkbox__input {
   width: 20px;
   height: 20px;
-}
-
-@media (max-width: 1440px) {
-  .filters{
-    width: 1024px;
-  }
-}
+  padding-right: 10px;
+  text-align: center;
+}  
 
 @media (max-width: 1024px) {
   .filters{
-    width: 767px;
-    height: 250px;
+    height: 300px;
   }
 
   .filters__bottom {
@@ -134,15 +129,14 @@
   }
 
   .block__filters {
-    height: 250px;
+    height: 240px;
     width: 727px;
   }
 }
 
 @media (max-width: 767px) {
   .filters{
-    width: 500px;
-    height: 300px;
+    height: 360px;
   }
 
   .filters__bottom {
@@ -152,7 +146,7 @@
   }
 
   .block__filters {
-    height: 300px;
+    height: 280px;
     width: 448px;
   }
 
@@ -161,4 +155,4 @@
     gap: 10px;
     flex-wrap: wrap;
   }
-}
+} 

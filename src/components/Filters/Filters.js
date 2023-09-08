@@ -30,12 +30,14 @@ function Filters() {
           <div className='filters__status'>
             <div className='filters__section'>status</div>
             <div className='filters__checkBox'>
-              <label>
-                <input id="limited" type="checkbox" name="status" value="Limited"></input>
+              <label className='label__checkbox'>
+                <input className='checkbox__input' id="limited" type="checkbox" name="status" value="Limited"></input>
                 Limited
               </label>
-              <input type="checkbox" id="Choice2" name="status" value="New"></input>
-              <label>New</label>
+              <label className='label__checkbox'>
+              <input className='checkbox__input' type="checkbox" id="Choice2" name="status" value="New"></input>
+                New
+              </label>
             </div>
           </div>
         </div>

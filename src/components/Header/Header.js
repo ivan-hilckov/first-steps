@@ -18,7 +18,7 @@ function Header() {
               </clipPath>
             </defs>
           </svg>
-          <input type="text" name="search" placeholder="Search among products" />
+          <input className="header__field" type="text" name="search" placeholder="Search among products" />
         </div>
       </div>
     </div>

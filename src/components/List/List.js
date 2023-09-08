@@ -36,18 +36,16 @@ function List() {
                   <div className='first__line'>
                     <div className='list__product__category'>{item.categoryName}</div>
                     <div className='first__line__category'>
-                      <div className='limited'>Limited</div>
-                      <div className='new'>New</div>
+                      {item.isLimited ? <div className='limited'>Limited</div> : null }
+                      {item.isNew ? <div className='new'>New</div> : null }
                     </div>
                   </div>
-                  <div className='list__product__title'>CS2300</div>
-                  <div className='list__product__description'>
-                    Roundup Ready® Canola Hybrid
-                  </div>
+                  <div className='list__product__title'>{item.name}</div>
+                  <div className='list__product__description'>{item.description}</div>
                 </div>
                 <div className='list__product__bottom'>
-                  <div className='list__product__price'>$34.00</div>
-                  <div className='list__product__discount'>Discount $2 per bag</div>
+                  <div className='list__product__price'>${item.price.toFixed(2)}</div>
+                  {item.discount ? <div className='list__product__discount'>Discount ${item.discount.toFixed(2)} per bag</div> : null}
                 </div>
               </div>
             </div>
