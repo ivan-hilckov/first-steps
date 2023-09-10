@@ -68,3 +68,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### PLAN
+
+- [ ] add css reset 
+- [ ] add https://www.npmjs.com/package/@astopo/price-formatter
+- [ ] isNew и isLimited
+- [ ] .filter
+- [ ] setState
+- [ ] моменты по верстке
+- [ ] картинки?
+
+### TO READ
+
+https://docs.npmjs.com/cli/v10/commands/npm-install
+https://docs.npmjs.com/cli/v10/configuring-npm/package-json
+
+https://react.dev/learn
+https://react.dev/reference/react/useState#usestate
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter

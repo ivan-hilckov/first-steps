@@ -1,12 +1,8 @@
 import './Filters.css';
-import data from 'data.json'
 
-function Button({ children }) {
-  return <button className='filter__button'>{children}</button>
-}
+function Filters({ items, current, onCurrentChange, isLimited, onIsLimitedChange }) {
+  console.log('items, current >?>>', items, current)
 
-function Filters() {
-  console.log('data >>>', data)
   return (
     <div className="filters">
       <div className='block__filters'>
@@ -21,9 +17,17 @@ function Filters() {
           <div className="filters__category">
             <div className='filters__section'>category</div>
             <div className='filters__buttons'>
-              <Button>All</Button>
-              {data.categoryList.map((item) => {
-                return <Button key={item.id}>{item.name}</Button>
+              {items.map((item) => {
+                console.log('item', item, item.type === current)
+                return (
+                  <button
+                    key={item.id}
+                    className={`filter__button ${item.type === current ? 'filter__button_active' : ''}`}
+                    onClick={() => onCurrentChange(item.type)}
+                  >
+                    {item.name}
+                  </button>
+                )
               })}
             </div>
           </div>
@@ -31,11 +35,21 @@ function Filters() {
             <div className='filters__section'>status</div>
             <div className='filters__checkBox'>
               <label className='label__checkbox'>
-                <input className='checkbox__input' id="limited" type="checkbox" name="status" value="Limited"></input>
+                <input
+                  className='checkbox__input'
+                  id="limited"
+                  type="checkbox"
+                  name="status"
+                  value={isLimited}
+                  onChange={e => {
+                    console.log('e', e.target.value)
+                    onIsLimitedChange(!e.target.value)
+                  }}
+                />
                 Limited
               </label>
               <label className='label__checkbox'>
-              <input className='checkbox__input' type="checkbox" id="Choice2" name="status" value="New"></input>
+                <input className='checkbox__input' type="checkbox" id="Choice2" name="status" value="New" ></input>
                 New
               </label>
             </div>

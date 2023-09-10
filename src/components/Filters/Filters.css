@@ -1,16 +1,15 @@
 .filters {
   height: 193px;
-  font-family: 'Montserrat', sans-serif;
-  background: #FAFAFA;
-  color: #000000F5;
+  font-family: "Montserrat", sans-serif;
+  background: #fafafa;
+  color: #000000f5;
   display: grid;
   grid-template-columns: 1fr 1fr;
-
 }
 
 .block__filters {
   border-radius: 16px;
-  background: var(--surface-blank, #FFF);
+  background: var(--surface-blank, #fff);
   box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.04);
   width: 920px;
   height: 152px;
@@ -31,7 +30,7 @@
 }
 
 .filters__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
@@ -49,8 +48,8 @@
 }
 
 .filters__section {
-  color: var(--secondary-200, #A8B8CA);
-  font-family: 'Montserrat';
+  color: var(--secondary-200, #a8b8ca);
+  font-family: "Montserrat";
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
@@ -60,20 +59,20 @@
 
 .filters__buttons {
   display: flex;
-  flex:wrap;
+  flex: wrap;
   gap: 10px;
 }
 
 .filter__button {
-  color: var(--primary-600, #037BFF);
-  background-color: #FFF;
+  color: var(--primary-600, #037bff);
+  background-color: #fff;
   text-align: center;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   border-radius: 8px;
-  border: 1px solid var(--primary-600, #037BFF);
+  border: 1px solid var(--primary-600, #037bff);
   cursor: pointer;
   padding: 4px 16px;
   align-items: center;
@@ -84,9 +83,10 @@
   opacity: 0.5;
 }
 
+.filter__button_active,
 .filter__button:active {
-  color: #FFF;
-  background-color:  #037BFF;
+  color: #fff;
+  background-color: #037bff;
   opacity: 1;
 }
 
@@ -107,7 +107,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  cursor:pointer;  
+  cursor: pointer;
 }
 
 .checkbox__input {
@@ -115,17 +115,17 @@
   height: 20px;
   padding-right: 10px;
   text-align: center;
-}  
+}
 
 @media (max-width: 1024px) {
-  .filters{
+  .filters {
     height: 300px;
   }
 
   .filters__bottom {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .block__filters {
@@ -135,14 +135,14 @@
 }
 
 @media (max-width: 767px) {
-  .filters{
+  .filters {
     height: 360px;
   }
 
   .filters__bottom {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .block__filters {
@@ -155,4 +155,4 @@
     gap: 10px;
     flex-wrap: wrap;
   }
-} 
+}
