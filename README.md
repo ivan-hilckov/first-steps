@@ -76,6 +76,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [ ] isNew и isLimited
 - [ ] .filter
 - [ ] setState
+
+### DEBET
+
 - [ ] моменты по верстке
 - [ ] картинки?
 
@@ -88,3 +91,4 @@ https://react.dev/learn
 https://react.dev/reference/react/useState#usestate
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
