@@ -1,6 +1,6 @@
 import './Filters.css';
 
-function Filters({ items, current, onCurrentChange, isLimited, onIsLimitedChange }) {
+function Filters({ items, current, onCurrentChange, isLimited, onIsLimitedChange, isNew, onIsNewChange }) {
   console.log('items, current >?>>', items, current)
 
   return (
@@ -42,14 +42,24 @@ function Filters({ items, current, onCurrentChange, isLimited, onIsLimitedChange
                   name="status"
                   value={isLimited}
                   onChange={e => {
-                    console.log('e', e.target.value)
+                    console.log('e!!!!!!!', e.target.value)
                     onIsLimitedChange(!e.target.value)
                   }}
                 />
                 Limited
               </label>
               <label className='label__checkbox'>
-                <input className='checkbox__input' type="checkbox" id="Choice2" name="status" value="New" ></input>
+                <input 
+                  className='checkbox__input' 
+                  id="new"
+                  type="checkbox" 
+                  name="status" 
+                  value={isNew} 
+                  onChange={e => {
+                    console.log('e!!!!!!!!!', e.target.value)
+                    onIsNewChange(!e.target.value)
+                  }}
+                />
                 New
               </label>
             </div>

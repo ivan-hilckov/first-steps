@@ -7,6 +7,8 @@ import wheat from "./images/wheat.png";
 import soybeans from "./images/soybeans.png";
 import barley from "./images/barley.png";
 
+import { format } from '@astopo/price-formatter';
+
 const typeToSrc = {
   wheat: wheat,
   soybeans: soybeans,
@@ -22,8 +24,8 @@ function Item({ item }) {
 
   return (
     <div className="list__product" key={item.id}>
-      <div className='list__product__image'>
-        <img src={typeToSrc[item.categoryType]} alt="canola" />
+      <div  className='list__product__card'>
+        <img className="list__product__image"src={typeToSrc[item.categoryType]} alt="canola" />
       </div>
       <div className="list__product__text">
         <div className='list__product__top'>
@@ -38,8 +40,8 @@ function Item({ item }) {
           <div className='list__product__description'>{item.description}</div>
         </div>
         <div className='list__product__bottom'>
-          <div className='list__product__price'>${item.price.toFixed(2)}</div>
-          {item.discount ? <div className='list__product__discount'>Discount ${item.discount.toFixed(2)} per bag</div> : null}
+          <div className='list__product__price'>{format(item.price)}</div> 
+          {item.discount ? <div className='list__product__discount'>Discount {format(item.discount)} per bag</div> : null}
         </div>
       </div>
     </div>

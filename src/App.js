@@ -19,27 +19,32 @@ function App() {
   const [productList, setProductList] = useState(data.productList)
   const [currentCategory, setCurrentCategory] = useState(categoryList[0].type)
   const [isLimited, setIsLimited] = useState(false)
-  const [isNem, setIsNem] = useState(false)
+  const [isNew, setIsNew] = useState(false)
 
   console.log('categoryList >>>', categoryList)
   console.log('productList >>>', productList)
   console.log('category >>>', currentCategory)
   console.log('isLimited >>>', isLimited)
-  console.log('isNem >>>', isNem)
+  console.log('isNew >>>', isNew)
 
   const onCurrentCategoryChange = (value) => {
     console.log('onCurrentCategoryChange: value >>', value)
     setCurrentCategory(value)
 
     const nextItems = data.productList.filter(item => {
-      return value === 'all' || item.categoryType === value
+      return value === 'all' || item.categoryType === value 
     })
 
     setProductList(nextItems)
   }
 
+
   const onIsLimitedChange = () => {
     setIsLimited(!isLimited)
+  }
+
+  const onIsNewChange = () => {
+    setIsNew(!isNew)
   }
 
   return (
@@ -50,8 +55,9 @@ function App() {
         current={currentCategory}
         onCurrentChange={onCurrentCategoryChange}
         onIsLimitedChange={onIsLimitedChange}
+        onIsNewChange={onIsNewChange}
         isLimited={isLimited}
-        isNem={isNem}
+        isNew={isNew}
       />
       <List items={productList} />
     </div>
