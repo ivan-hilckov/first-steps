@@ -47,8 +47,16 @@
   outline: none;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 360px) {
   .header{
-    width: 500px;
+    width: 300px;
+    grid-template-columns: 120px 200px;
+  }
+  .header__field {
+    width: 120px;
+    font-size: 10px;
+  }
+  .header__right{
+    display: flex;
   }
 }

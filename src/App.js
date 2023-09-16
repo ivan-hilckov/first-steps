@@ -25,7 +25,7 @@ function App() {
   console.log('productList >>>', productList)
   console.log('category >>>', currentCategory)
   console.log('isLimited >>>', isLimited)
-  console.log('isNem >>>', isNem)
+  console.log('isNew >>>', isNew)
 
   const onCurrentCategoryChange = (value) => {
     console.log('onCurrentCategoryChange: value >>', value)
@@ -36,16 +36,26 @@ function App() {
     })
 
     setProductList(nextItems)
+    console.log("nextItems !!!!!!!", nextItems)
   }
 
 
   const onIsLimitedChange = () => {
     setIsLimited(!isLimited)
 
+    const nextItems = isLimited ? data.productList : data.productList.filter(item => {
+      return item.isLimited === true 
+    })
+    setProductList(nextItems)
   }
 
   const onIsNewChange = () => {
     setIsNew(!isNew)
+
+    const nextItems = isNew ? data.productList : data.productList.filter(item => {
+      return item.isNew === true 
+    })
+    setProductList(nextItems)
   }
 
   return (
@@ -58,7 +68,7 @@ function App() {
         onIsLimitedChange={onIsLimitedChange}
         onIsNewChange={onIsNewChange}
         isLimited={isLimited}
-        isNem={isNem}
+        isNew={isNew}
       />
       <List items={productList} />
     </div>

@@ -156,3 +156,26 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 360px) {
+  .filters {
+    height: 380px;
+  }
+
+  .filters__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .block__filters {
+    height: 320px;
+    width: 310px;
+  }
+
+  .filters__buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}

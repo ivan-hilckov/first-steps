@@ -1,5 +1,6 @@
 .list__product {
     height: 150px;
+    width: 550px;
     border-radius: 16px;
     background: #FFF;
     box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.04);
@@ -21,6 +22,7 @@
 }
 
 .list__product__top {
+    width: 420px;
     display: inline-block;
 }
 
@@ -113,3 +115,21 @@
     font-weight: 600;
     line-height: 16px;
 }
+
+@media (max-width: 360px) {
+    .list__product {
+        width: 340px;
+        height: auto;
+    }
+    .list__product__text{
+        padding: 5px 0;
+    }
+    .list__product__top{
+        width: 200px;
+    }
+    .first__line__category {
+        display: flex;
+        width: 130px;
+        justify-content: flex-end;
+    }
+  }

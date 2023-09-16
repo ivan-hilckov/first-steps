@@ -42,7 +42,6 @@ function Filters({ items, current, onCurrentChange, isLimited, onIsLimitedChange
                   name="status"
                   value={isLimited}
                   onChange={e => {
-                    console.log('e!!!!!!!', e.target.value)
                     onIsLimitedChange(!e.target.value)
                   }}
                 />
@@ -56,7 +55,6 @@ function Filters({ items, current, onCurrentChange, isLimited, onIsLimitedChange
                   name="status" 
                   value={isNew} 
                   onChange={e => {
-                    console.log('e!!!!!!!!!', e.target.value)
                     onIsNewChange(!e.target.value)
                   }}
                 />
