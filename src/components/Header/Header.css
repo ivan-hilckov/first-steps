@@ -47,6 +47,10 @@
   outline: none;
 }
 
+.header__field::placeholder {
+  color: #A8B8CA;
+}
+
 @media (max-width: 360px) {
   .header{
     width: 300px;

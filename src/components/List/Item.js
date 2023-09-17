@@ -1,4 +1,3 @@
-import './Item.css';
 
 import canola from "./images/canola.png";
 import corn from "./images/corn.png";
@@ -9,6 +8,9 @@ import barley from "./images/barley.png";
 
 import { format } from '@astopo/price-formatter';
 
+import styles from './Item.module.css';
+
+
 const typeToSrc = {
   wheat: wheat,
   soybeans: soybeans,
@@ -18,30 +20,32 @@ const typeToSrc = {
   barley: barley,
 }
 
+
+const more = (text = '', length = 50) => {
+  return text.length > length ? `${text.slice(0, length)}...` : text
+}
+
 function Item({ item }) {
-
-  console.log('item >>>', item)
-
   return (
-    <div className="list__product" key={item.id}>
-      <div  className='list__product__card'>
-        <img className="list__product__image"src={typeToSrc[item.categoryType]} alt="canola" />
-      </div>
-      <div className="list__product__text">
-        <div className='list__product__top'>
-          <div className='first__line'>
-            <div className='list__product__category'>{item.categoryName}</div>
-            <div className='first__line__category'>
-              {item.isLimited ? <div className='limited'>Limited</div> : null}
-              {item.isNew ? <div className='new'>New</div> : null}
-            </div>
-          </div>
-          <div className='list__product__title'>{item.name}</div>
-          <div className='list__product__description'>{item.description}</div>
+    <div className={styles.item}>
+      <img className={styles.image} src={typeToSrc[item.categoryType]} alt="canola" />
+      <div className={styles.wrapper}>
+        <div className={styles.tags}>
+          {item.isLimited ? <div className={styles.limited}>Limited</div> : null}
+          {item.isNew ? <div className={styles.new}>New</div> : null}
         </div>
-        <div className='list__product__bottom'>
-          <div className='list__product__price'>{format(item.price)}</div> 
-          {item.discount ? <div className='list__product__discount'>Discount {format(item.discount)} per bag</div> : null}
+        <div className={styles.top}>
+          <div className={styles.category}>{item.categoryName}</div>
+          <div className={styles.name}>{item.name}</div>
+          <div className={styles.description} alt={item.description}>{more(item.description)}</div>
+        </div>
+        <div className={styles.bottom}>
+          <div className={styles.price}>{format(item.price)}</div>
+          {
+            item.discount
+              ? <div className={styles.discount}>Discount {format(item.discount)} per bag</div>
+              : null
+          }
         </div>
       </div>
     </div>

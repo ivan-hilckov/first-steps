@@ -1,3 +1,4 @@
+import qs from 'query-string'
 import Header from './components/Header/Header'
 import Filters from './components/Filters/Filters'
 import List from './components/List/List'
@@ -7,8 +8,20 @@ import data from 'data.json'
 import './App.css';
 import { useState } from 'react';
 
+const filter = (list = [], category =  'all', isLimited = false, isNew = false, search = '4021') => {
+  const next = list
+    .filter(item => isNew ? item.isNew: true )
+    .filter(item => isLimited ? item.isLimited : true )
+    .filter(item => category === 'all' || item.categoryType === category)
+    // .filter(item => item.name.includes(search) || item.description.includes(search))
+
+  return next
+}
+
 function App() {
   console.log('data >>>', data)
+
+  const query = qs.parse(window.location.search)
 
   const [categoryList, setCategoryList] = useState([{
     id: "all",
@@ -16,51 +29,47 @@ function App() {
     type: "all",
   }, ...data.categoryList])
 
+  const [currentCategory, setCurrentCategory] = useState(() => {
+    return query?.category ? query?.category : 'all'
+  })
+  const [isLimited, setIsLimited] = useState(() => Boolean(query?.isLimited))
+  const [isNew, setIsNew] = useState(() => Boolean(query?.isNew))
+
   const [productList, setProductList] = useState(data.productList)
-  const [currentCategory, setCurrentCategory] = useState(categoryList[0].type)
-  const [isLimited, setIsLimited] = useState(false)
-  const [isNew, setIsNew] = useState(false)
 
-  console.log('categoryList >>>', categoryList)
-  console.log('productList >>>', productList)
-  console.log('category >>>', currentCategory)
-  console.log('isLimited >>>', isLimited)
-  console.log('isNew >>>', isNew)
+  // const [search, setSearch] = useState('')
 
+console.log('isNew', isNew)
+
+//?key=value&key=value
   const onCurrentCategoryChange = (value) => {
-    console.log('onCurrentCategoryChange: value >>', value)
-    setCurrentCategory(value)
+    const nextCategory = value
+    const nextProductList = filter(data.productList, value, isLimited, isNew)
 
-    const nextItems = data.productList.filter(item => {
-      return value === 'all' || item.categoryType === value 
-    })
-
-    setProductList(nextItems)
-    console.log("nextItems !!!!!!!", nextItems)
+    setCurrentCategory(nextCategory)
+    setProductList(nextProductList)
   }
 
-
   const onIsLimitedChange = () => {
-    setIsLimited(!isLimited)
+    const nextIsLimited = !isLimited
+    const nextProductList = filter(data.productList, currentCategory, nextIsLimited, isNew)
 
-    const nextItems = isLimited ? data.productList : data.productList.filter(item => {
-      return item.isLimited === true 
-    })
-    setProductList(nextItems)
+    setIsLimited(nextIsLimited)
+    setProductList(nextProductList)
   }
 
   const onIsNewChange = () => {
-    setIsNew(!isNew)
+    const nextIsNew = !isNew
+    const nextProductList = filter(data.productList, currentCategory, isLimited,  nextIsNew)
 
-    const nextItems = isNew ? data.productList : data.productList.filter(item => {
-      return item.isNew === true 
-    })
-    setProductList(nextItems)
+    setIsNew(nextIsNew)
+    setProductList(nextProductList)
+    window.history.pushState({}, '', `/?isNew=${nextIsNew}`)
   }
 
   return (
     <div className="app">
-      <Header />
+      <Header onS />
       <Filters
         items={categoryList}
         current={currentCategory}

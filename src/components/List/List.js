@@ -7,7 +7,7 @@ function List({ items }) {
   return (
     <div className="list">
       <div className="list__container">
-        {items.map(item => <Item item={item} />)}
+        {items.map(item => <Item item={item} key={item.id} />)}
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import './Filters.css';
 
 function Filters({ items, current, onCurrentChange, isLimited, onIsLimitedChange, isNew, onIsNewChange }) {
-  console.log('items, current >?>>', items, current)
+  console.log('items, current >?>>', isNew)
 
   return (
     <div className="filters">
@@ -18,7 +18,6 @@ function Filters({ items, current, onCurrentChange, isLimited, onIsLimitedChange
             <div className='filters__section'>category</div>
             <div className='filters__buttons'>
               {items.map((item) => {
-                console.log('item', item, item.type === current)
                 return (
                   <button
                     key={item.id}
@@ -40,7 +39,7 @@ function Filters({ items, current, onCurrentChange, isLimited, onIsLimitedChange
                   id="limited"
                   type="checkbox"
                   name="status"
-                  value={isLimited}
+                  checked={isLimited}
                   onChange={e => {
                     onIsLimitedChange(!e.target.value)
                   }}
@@ -48,12 +47,12 @@ function Filters({ items, current, onCurrentChange, isLimited, onIsLimitedChange
                 Limited
               </label>
               <label className='label__checkbox'>
-                <input 
-                  className='checkbox__input' 
+                <input
+                  className='checkbox__input'
                   id="new"
-                  type="checkbox" 
-                  name="status" 
-                  value={isNew} 
+                  type="checkbox"
+                  name="status"
+                  checked={isNew}
                   onChange={e => {
                     onIsNewChange(!e.target.value)
                   }}

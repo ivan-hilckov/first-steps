@@ -1,6 +1,6 @@
 import './Header.css';
 
-function Header() {
+function Header({  }) {
   return (
     <div className="header">
       <div className='header__left'>
@@ -18,7 +18,13 @@ function Header() {
               </clipPath>
             </defs>
           </svg>
-          <input className="header__field" type="text" name="search" placeholder="Search among products" />
+          <input
+            name="search"
+            type="text"
+            className="header__field"
+            placeholder="Search among products"
+            onChange={(e) => { console.log('e >>>', e.target.value) }}
+          />
         </div>
       </div>
     </div>

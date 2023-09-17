@@ -6,4 +6,5 @@
 } */
 .app {
   background: #FAFAFA;
+  min-height: 100vh;
 }
