@@ -102,104 +102,6 @@
   line-height: 16px;
 }
 
-.list__product__text {
-  display: grid;
-  justify-content: space-between;
-  padding: 12px 0;
-}
-
-.list__product__top {
-  /* width: 420px; */
-  display: inline-block;
-}
-
-.first__line {
-  display: grid;
-  grid-template-columns: 1fr 330px;
-}
-
-.first__line__category {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  padding-right: 12px;
-}
-
-.limited {
-  color: var(--secondary-300, #889bb1);
-  width: 45px;
-  height: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 20px;
-  border: 1px solid transparent;
-  border-radius: 12px;
-  background: var(--secondary-50, #e7eef9);
-  padding: 0 8px;
-  text-align: center;
-}
-
-.new {
-  color: var(--accent-approving, #20b02e);
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 20px;
-  border: 1px solid transparent;
-  border-radius: 12px;
-  background: var(--background-approved, #e6f5e6);
-  padding: 0 8px;
-}
-
-.filters__category {
-  color: var(--secondary-200, #a8b8ca);
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-}
-
-.list__product__title {
-  color: rgba(0, 0, 0, 0.96);
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-}
-
-.list__product__description {
-  color: rgba(0, 0, 0, 0.96);
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  margin-right: 10px;
-}
-
-.list__product__bottom {
-  display: flex;
-  text-align: center;
-  align-items: center;
-}
-
-.list__product__price {
-  margin-right: 8px;
-  color: var(--on-surface-high-emphasys, rgba(0, 0, 0, 0.96));
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-}
-
-.list__product__discount {
-  color: var(--accent-notify, #f90);
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 16px;
-}
 
 @media (max-width: 360px) {
   .list__product {
@@ -218,3 +120,4 @@
     justify-content: flex-end;
   }
 }
+

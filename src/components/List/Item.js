@@ -21,7 +21,7 @@ const typeToSrc = {
 }
 
 
-const more = (text = '', length = 50) => {
+const more = (text = '', length = 40) => {
   return text.length > length ? `${text.slice(0, length)}...` : text
 }
 

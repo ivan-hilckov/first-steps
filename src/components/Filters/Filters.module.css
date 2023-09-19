@@ -7,7 +7,7 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.block__filters {
+.block {
   border-radius: 16px;
   background: var(--surface-blank, #fff);
   box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.04);
@@ -19,7 +19,7 @@
   margin-left: 24px;
 }
 
-.filters__top {
+.top {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -29,25 +29,25 @@
   margin-top: 22px;
 }
 
-.filters__title {
+.title {
   font-family: "Montserrat";
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
 }
 
-.filters__bottom {
+.bottom {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.filters__category {
+.category {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
 }
 
-.filters__section {
+.section {
   color: var(--secondary-200, #a8b8ca);
   font-family: "Montserrat";
   font-size: 14px;
@@ -57,13 +57,14 @@
   margin-bottom: 16px;
 }
 
-.filters__buttons {
+.buttons {
   display: flex;
   flex: wrap;
   gap: 10px;
+  padding-right: 10px;
 }
 
-.filter__button {
+.button {
   color: var(--primary-600, #037bff);
   background-color: #fff;
   text-align: center;
@@ -79,32 +80,32 @@
   gap: 10px;
 }
 
-.filter__button:hover {
+.button:hover {
   opacity: 0.5;
 }
 
-.filter__button_active,
-.filter__button:active {
+.button_active,
+.button:active {
   color: #fff;
   background-color: #037bff;
   opacity: 1;
 }
 
-.filters__status {
+.status {
   display: flex;
   flex-direction: column;
   padding-left: 24px;
   margin-bottom: 20px;
 }
 
-.filters__checkBox {
+.checkBox {
   display: flex;
   gap: 14px;
   text-align: center;
   margin-top: 5px;
 }
 
-.label__checkbox {
+.label {
   display: flex;
   justify-content: center;
   font-size: 14px;
@@ -114,7 +115,7 @@
   gap: 10px;
 }
 
-.checkbox__input {
+.input {
   width: 20px;
   height: 20px;
   padding-right: 10px;
@@ -126,60 +127,35 @@
     height: 300px;
   }
 
-  .filters__bottom {
+  .bottom {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
-  .block__filters {
+  .block {
     height: 240px;
     width: 727px;
   }
 }
-
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .filters {
     height: 360px;
   }
 
-  .filters__bottom {
+  .bottom {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
-  .block__filters {
-    height: 280px;
-    width: 448px;
-  }
-
-  .filters__buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 360px) {
-  .filters {
-    height: 380px;
-  }
-
-  .filters__bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .block__filters {
+  .block {
     height: 320px;
     width: 310px;
   }
-
-  .filters__buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
+  .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 }
