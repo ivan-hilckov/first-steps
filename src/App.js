@@ -6,7 +6,7 @@ import List from './components/List/List'
 import data from 'data.json'
 
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const filter = (list = [], category = 'all', isLimited = false, isNew = false, search = '') => {
   const next = list
@@ -54,7 +54,7 @@ function App() {
   }
 
   const onCurrentCategoryChange = (value) => {
-    const nextCategory = value
+    const nextCategory = value ?? ''
     const nextProductList = filter(data.productList, value, isLimited, isNew, search)
 
     setCurrentCategory(nextCategory)
@@ -88,6 +88,15 @@ function App() {
     setProductList(nextProductList)
     pushRouterState({ search: nextSearch })
   }
+
+  useEffect(() => {
+
+    fetch('/product')
+      .then((res) => res.json())
+      .then(data => console.log('data', data))
+
+  }, [])
+
 
   return (
     <div className="app">
