@@ -24,7 +24,7 @@ const filter = (list = [], category = 'all', isLimited = false, isNew = false, s
 }
 
 function App() {
-  console.log('data >>>', data)
+  // console.log('data >>>', data)
 
   const query = qs.parse(window.location.search)
 
@@ -90,11 +90,13 @@ function App() {
   }
 
   useEffect(() => {
-
-    fetch('/product')
+    console.log('FETCH')
+    fetch('/api/product')
       .then((res) => res.json())
-      .then(data => console.log('data', data))
-
+      .then(data => console.log('data product', data))
+    fetch('/api/category')
+      .then((res) => res.json())
+      .then(data => console.log('data category', data))
   }, [])
 
 
